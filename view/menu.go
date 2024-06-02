@@ -1,4 +1,4 @@
-package menu
+package view
 
 import (
 	"fmt"
@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Kallrish/quakeLogParser/packages/parser"
-	"github.com/Kallrish/quakeLogParser/packages/report"
+	"github.com/Kallrish/quakeLogParser/services/parser"
+	"github.com/Kallrish/quakeLogParser/services/report"
 	"github.com/Kallrish/quakeLogParser/shared"
 	"github.com/Kallrish/quakeLogParser/util"
 )
@@ -46,10 +46,10 @@ func GetUserLogFilePathInput() {
 func showLogReportProccess(userLog []byte) {
 	fmt.Println(shared.DIVIDER_SINGLE)
 	fmt.Println(shared.PARSING_LOG)
-	parser.ParseLogFile(string(userLog))
+	finalGameList := parser.ParseLogFile(string(userLog))
 	fmt.Println(shared.DIVIDER_SINGLE)
 	fmt.Println(shared.CONVERTING_JSON)
-	readyToExportGamesList := parser.GenerateJsonString(shared.FinalGameList)
+	readyToExportGamesList := parser.GenerateJsonString(finalGameList)
 	fmt.Println(shared.DIVIDER_SINGLE)
 	fmt.Println(shared.EXPORTING_FILE)
 	report.ExportJsonFileToPath(readyToExportGamesList)

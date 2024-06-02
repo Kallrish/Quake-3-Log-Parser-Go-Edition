@@ -1,6 +1,6 @@
 package main
 
-import "github.com/Kallrish/quakeLogParser/packages/menu"
+import menu "github.com/Kallrish/quakeLogParser/view"
 
 func main() {
 	menu.PrintMainMenuWelcomeText()
