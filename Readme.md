@@ -1,4 +1,11 @@
-# Software Engineer test
+# Quake 3 Log Parser - Go Edition
+
+Project created to study a little about of Golang doing this code challenge.
+The sample log file is located in Assets directory.
+
+Bellow are the challenge rules if anyone wants to try the challenge too.
+
+## Software Engineer test
 
 > Truth can only be found in one place: the code. <br/>
 > -- Robert C. Martin
@@ -13,7 +20,7 @@ You are welcome to use a programming language that you are comfortable with.
 
 - Git
 - A development environment
-- Quake game (Sample is located in Assets directory)
+- Quake game log
 
 ## 3. Tasks
 
